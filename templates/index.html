@@ -3,5 +3,80 @@
 
 
 {% block content %}
-<div>ID CARD GENERATOR</div>
+<div class="flex flex-col items-center h-full bg-secondary">
+    <div class="w-full h-20 flex items-center justify-between bg-white shadow px-8 md:px-56">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="15" fill="#3A3A3A" />
+            <path
+                d="M10.834 12.5163C10.834 12.2401 11.0578 12.0163 11.334 12.0163H14.0463C14.3225 12.0163 14.5463 12.2401 14.5463 12.5163V28.3509C14.5463 28.627 14.3225 28.8509 14.0463 28.8509H11.334C11.0578 28.8509 10.834 28.627 10.834 28.3509V12.5163Z"
+                fill="white" />
+            <path
+                d="M21.1477 22.3648C21.1477 23.4823 21.3936 24.3811 21.8854 25.0613C22.3772 25.7414 23.107 26.0815 24.0748 26.0815C24.3921 26.0815 24.6856 26.0734 24.9553 26.0572C25.0459 26.0464 25.1311 26.0355 25.2109 26.0246C25.4497 25.9921 25.6216 25.7853 25.6216 25.5443V19.6468C25.6216 19.4783 25.5381 19.3181 25.3866 19.2445C25.2044 19.1559 24.9893 19.0786 24.7411 19.0125C24.3921 18.9153 24.0351 18.8667 23.6702 18.8667C21.9886 18.8667 21.1477 20.0327 21.1477 22.3648ZM29.1673 28.0681C29.1673 28.2878 29.024 28.4825 28.8123 28.5411C28.5856 28.6039 28.339 28.6666 28.0727 28.7294C27.6602 28.8104 27.2239 28.8833 26.7638 28.948C26.3196 29.0128 25.8595 29.0614 25.3836 29.0938C24.9235 29.1424 24.4793 29.1667 24.051 29.1667C23.0198 29.1667 22.0996 29.0128 21.2905 28.7051C20.4814 28.3974 19.7992 27.9601 19.244 27.3933C18.6887 26.8103 18.2604 26.1139 17.9589 25.3042C17.6734 24.4782 17.5306 23.5551 17.5306 22.5349C17.5306 21.4984 17.6575 20.5672 17.9114 19.7412C18.1652 18.8991 18.5301 18.1865 19.006 17.6035C19.482 17.0205 20.061 16.5751 20.7432 16.2674C21.4412 15.9597 22.2345 15.8059 23.1229 15.8059C23.6147 15.8059 24.051 15.8545 24.4317 15.9516C24.5883 15.99 24.7448 16.0346 24.9014 16.0856C25.2462 16.1979 25.6216 15.9546 25.6216 15.5919V11.0075C25.6216 10.7627 25.7989 10.5539 26.0404 10.5141L28.5862 10.0956C28.8906 10.0455 29.1673 10.2804 29.1673 10.5889V28.0681Z"
+                fill="white" />
+        </svg>
+        <div class="flex items-center cursor-pointer hover:scale-95 transition duration-150 ease-in-out">
+            <a class=" underline text-lg font-bold mr-2 text-primary" href="#" target="_blank">Source Code</a>
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M24.9756 3.73783C24.929 3.7393 24.8825 3.74337 24.8364 3.75003H18.75C18.5844 3.74769 18.4199 3.77829 18.2662 3.84006C18.1125 3.90183 17.9726 3.99353 17.8546 4.10983C17.7367 4.22614 17.643 4.36473 17.5791 4.51755C17.5151 4.67037 17.4822 4.83438 17.4822 5.00003C17.4822 5.16569 17.5151 5.32969 17.5791 5.48251C17.643 5.63534 17.7367 5.77393 17.8546 5.89023C17.9726 6.00654 18.1125 6.09824 18.2662 6.16001C18.4199 6.22177 18.5844 6.25238 18.75 6.25003H21.9824L10.3662 17.8662C10.2462 17.9814 10.1505 18.1194 10.0845 18.272C10.0185 18.4247 9.98365 18.589 9.98195 18.7553C9.98026 18.9216 10.0118 19.0866 10.0746 19.2405C10.1375 19.3945 10.2304 19.5344 10.348 19.652C10.4656 19.7696 10.6055 19.8625 10.7595 19.9254C10.9135 19.9883 11.0784 20.0198 11.2447 20.0181C11.411 20.0164 11.5753 19.9815 11.728 19.9155C11.8806 19.8496 12.0186 19.7538 12.1338 19.6338L23.75 8.01761V11.25C23.7477 11.4157 23.7783 11.5801 23.84 11.7338C23.9018 11.8875 23.9935 12.0274 24.1098 12.1454C24.2261 12.2634 24.3647 12.357 24.5175 12.421C24.6703 12.4849 24.8343 12.5178 25 12.5178C25.1657 12.5178 25.3297 12.4849 25.4825 12.421C25.6353 12.357 25.7739 12.2634 25.8902 12.1454C26.0065 12.0274 26.0982 11.8875 26.16 11.7338C26.2217 11.5801 26.2523 11.4157 26.25 11.25V5.15872C26.2749 4.97876 26.2603 4.79552 26.2071 4.62179C26.154 4.44805 26.0636 4.28798 25.9423 4.15273C25.821 4.01748 25.6717 3.9103 25.5047 3.83864C25.3378 3.76699 25.1572 3.73258 24.9756 3.73783ZM6.25 3.75003C4.88367 3.75003 3.75 4.8837 3.75 6.25003V23.75C3.75 25.1164 4.88367 26.25 6.25 26.25H23.75C25.1163 26.25 26.25 25.1164 26.25 23.75V16.25C26.2523 16.0844 26.2217 15.9199 26.16 15.7662C26.0982 15.6125 26.0065 15.4726 25.8902 15.3547C25.7739 15.2367 25.6353 15.143 25.4825 15.0791C25.3297 15.0152 25.1657 14.9822 25 14.9822C24.8343 14.9822 24.6703 15.0152 24.5175 15.0791C24.3647 15.143 24.2261 15.2367 24.1098 15.3547C23.9935 15.4726 23.9018 15.6125 23.84 15.7662C23.7783 15.9199 23.7477 16.0844 23.75 16.25V23.75H6.25V6.25003H13.75C13.9156 6.25238 14.0801 6.22177 14.2338 6.16001C14.3875 6.09824 14.5274 6.00654 14.6454 5.89023C14.7633 5.77393 14.857 5.63534 14.9209 5.48251C14.9849 5.32969 15.0178 5.16569 15.0178 5.00003C15.0178 4.83438 14.9849 4.67037 14.9209 4.51755C14.857 4.36473 14.7633 4.22614 14.6454 4.10983C14.5274 3.99353 14.3875 3.90183 14.2338 3.84006C14.0801 3.77829 13.9156 3.74769 13.75 3.75003H6.25Z"
+                    fill="#3A3A3A" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="lg:w-1/2 mt-24 mx-2">
+        <p class="text-primary font-bold text-2xl">Identity Card Generator</p>
+        <p class="text-lg text-primary">Please provide us your details and we will help your generate your Id card.</p>
+
+        <div class="bg-white p-10 rounded-xl mt-10 shadow">
+            <form action="handle_form" method="post" enctype="multipart/form-data">
+                <div class="flex justify-between items-start">
+                    <div class="mr-4 w-1/2">
+                        <p class="text-base font-bold text-primary">Your Details</p>
+                        <div class="my-4">
+                            <label for="id" class="block text-base text-primary">Membership Id</label>
+                            <input type="text" name="id"
+                                class=" w-full mt-1 block p-2 rounded-md border-2 border-accent focus:border-primary focus:outline-none caret-primary text-lg text-primary transition ease-in-out duration-200"
+                                placeholder="Enter your membership id">
+                        </div>
+                        <div class="my-4">
+                            <label for="name" class="block text-base text-primary">Your Full Name</label>
+                            <input type="text" name="name"
+                                class=" w-full mt-1 block p-2 rounded-md border-2 border-accent focus:border-primary focus:outline-none caret-primary text-lg text-primary transition ease-in-out duration-200"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="my-4">
+                            <label for="role" class="block text-base text-primary">Your Role</label>
+                            <input type="text" name="role"
+                                class="w-full mt-1 block p-2 rounded-md border-2 border-accent focus:border-primary focus:outline-none caret-primary text-lg text-primary transition ease-in-out duration-200"
+                                placeholder="Enter your role">
+                        </div>
+
+                        <div class="my-4">
+                            <label for="photo" class=" text-base text-primary">Upload Your Image</label>
+                            <div class="mt-1 flex justify-between items-center">
+                                <input type="file" name="photo"
+                                    class=" w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-secondary file:text-primary hover:file:bg-accent" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2">
+                        <p class="text-base font-bold text-primary">Template Preview</p>
+                        <div class="my-4 overflow-hidden bg-secondary h-96 flex items-center">
+                            <img src="static/card_template/sample.png" title="Template Preview"
+                                class=" h-72 m-auto"></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 m-auto w-full text-center">
+                    <input type="submit" value="Download"
+                        class="cursor-pointer rounded-md w-32 h-10 bg-primary text-secondary hover:bg-accent hover:text-primary transition ease-in-out duration-200">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <p class="text-sm text-center mt-4">All rights reserved | Nitish Sharma</p>
+</div>
 {% endblock %}

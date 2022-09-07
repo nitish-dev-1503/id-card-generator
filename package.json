@@ -1,0 +1,22 @@
+{
+  "name": "id-card-generator",
+  "version": "1.0.0",
+  "description": "Id card generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitish-dev-1503/id-card-generator.git"
+  },
+  "author": "Nitish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitish-dev-1503/id-card-generator/issues"
+  },
+  "homepage": "https://github.com/nitish-dev-1503/id-card-generator#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}

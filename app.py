@@ -11,8 +11,8 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/handle_form', methods=['POST'])
-def handle_form():
+@app.route('/handle_download', methods=['POST'])
+def handle_download():
     pdf = generatePDF(request.form, request.files)
     return createResponse(pdf)
 

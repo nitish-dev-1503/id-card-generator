@@ -557,6 +557,15 @@ video {
   position: static;
 }
 
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.top-0{
+  top: 0px;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -569,6 +578,11 @@ video {
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .mr-2{
@@ -595,16 +609,28 @@ video {
   margin-top: 1rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mb-48{
+  margin-bottom: 12rem;
+}
+
 .block{
   display: block;
 }
 
 .flex{
   display: flex;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .h-20{
@@ -651,8 +677,16 @@ video {
   align-items: center;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
 }
 
 .overflow-hidden{
@@ -665,6 +699,18 @@ video {
 
 .rounded-md{
   border-radius: 0.375rem;
+}
+
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
 }
 
 .border-2{
@@ -699,6 +745,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
@@ -706,6 +756,10 @@ video {
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .font-ubuntu{
@@ -732,6 +786,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -749,6 +808,11 @@ video {
 .text-secondary{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
+.text-accent{
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -800,6 +864,14 @@ video {
 
 .file\:rounded-full::file-selector-button{
   border-radius: 9999px;
+}
+
+.file\:rounded-2xl::-webkit-file-upload-button{
+  border-radius: 1rem;
+}
+
+.file\:rounded-2xl::file-selector-button{
+  border-radius: 1rem;
 }
 
 .file\:border-0::-webkit-file-upload-button{
@@ -902,6 +974,16 @@ video {
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px){
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:text-right{
+    text-align: right;
+  }
 }
 
 @media (min-width: 768px){

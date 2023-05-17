@@ -13,11 +13,10 @@ def generatePDF(form, files):
     name = form.get('name')
     role = form.get('role')
     photo = files['photo']
-    photo_in_base64 = base64.b64encode(photo.read()).decode('UTF-8')
-    image_tag = '<img src="data:image/png;base64,' + \
-        photo_in_base64 + '" alt="profile picture" class="profile">'
+    photo_in_base64 = base64.b64encode(photo.read())
+    image_url = 'data:image/png;base64,' + photo_in_base64.decode('UTF-8')
 
-    return pdfGenerator(template, id, name, role, image_tag)
+    return pdfGenerator(template, id, name, role, image_url)
 
 
 def generateZIP(files):

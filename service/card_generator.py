@@ -1,12 +1,12 @@
 import pdfkit
 
 
-def pdfGenerator(file, id, name, role, picture):
+def pdfGenerator(file, id, name, role, image_url):
     fileAsString = file.read()
     fileAsString = fileAsString.replace('@ID', id)
     fileAsString = fileAsString.replace('@NAME', name)
     fileAsString = fileAsString.replace('@ROLE', role)
-    fileAsString = fileAsString.replace('@PICTURE', picture)
+    fileAsString = fileAsString.replace('@PICTURE', image_url)
 
     return convertToPdf(fileAsString)
 

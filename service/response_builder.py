@@ -2,11 +2,11 @@ import pandas as pd
 import base64
 from zipfile import ZipFile, ZIP_DEFLATED
 from io import BytesIO
-from service.card_generator import pdfGenerator
+from service.card_generator import convertToPdf, convertToJpg
 from flask import Response
 
 
-def generatePDF(form, files):
+def generateCardFromTemplate(form, files):
     template = open('static/card_template/template.html', 'r')
 
     id = form.get('id')
@@ -16,7 +16,22 @@ def generatePDF(form, files):
     photo_in_base64 = base64.b64encode(photo.read())
     image_url = 'data:image/png;base64,' + photo_in_base64.decode('UTF-8')
 
-    return pdfGenerator(template, id, name, role, image_url)
+    fileAsString = template.read()
+    fileAsString = fileAsString.replace('@ID', id)
+    fileAsString = fileAsString.replace('@NAME', name)
+    fileAsString = fileAsString.replace('@ROLE', role)
+    fileAsString = fileAsString.replace('@PICTURE', image_url)
+    return fileAsString
+
+
+def generatePDF(form, files):
+    fileAsString = generateCardFromTemplate(form, files)
+    return convertToPdf(fileAsString)
+
+
+def generateJPG(form, files):
+    fileAsString = generateCardFromTemplate(form, files)
+    return convertToJpg(fileAsString)
 
 
 def generateZIP(files):

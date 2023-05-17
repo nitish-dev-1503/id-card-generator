@@ -570,6 +570,10 @@ video {
   margin: auto;
 }
 
+.m-4{
+  margin: 1rem;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -648,8 +652,18 @@ video {
   width: 50%;
 }
 
+.w-fit{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-32{
   width: 8rem;
+}
+
+.w-40{
+  width: 10rem;
 }
 
 .cursor-pointer{
@@ -723,6 +737,16 @@ video {
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-center{

@@ -19,12 +19,12 @@ def handle_download():
         return createPDFResponse(pdf)
     elif form['action'] == 'Download Image':
         image_data = generateJPG(form, request.files)
-        return send_file(BytesIO(image_data), mimetype='image/jpeg', as_attachment=True, attachment_filename='idcard.jpg')
+        return send_file(BytesIO(image_data), mimetype='image/jpeg', as_attachment=True, attachment_filename='id-card.jpg')
 
 
 @ app.route('/handle_bulk_download', methods=['POST'])
 def handle_bulk_download():
-    zip=generateZIP(request.files)
+    zip = generateZIP(request.files)
     return createZIPResponse(zip)
 
 

@@ -24,7 +24,7 @@ def generateCardFromTemplate(form, files):
     return fileAsString
 
 
-def generateCardFromTemplate(template, id, name, role, photo):
+def generateCardFromTemplateForBulkUpload(template, id, name, role, photo):
     fileAsString = template.read()
     fileAsString = fileAsString.replace('@ID', id)
     fileAsString = fileAsString.replace('@NAME', name)
@@ -55,7 +55,7 @@ def generateZIP(files):
             name = row[1]
             role = row[2]
             photo = row[3]
-            fileAsString = generateCardFromTemplate(template, id, name, role, photo)
+            fileAsString = generateCardFromTemplateForBulkUpload(template, id, name, role, photo)
             pdf = convertToPdf(fileAsString)
             zip.writestr(id + '_' + name + '.pdf', data=pdf)
     return mem_zip.getvalue()
